@@ -5,8 +5,11 @@ I ll be writing a paper describing the algorithm used shortly.
 Specs : In python3. Need multiprocessing to run the algorithms parallely.
 
 Using this code : 
-  Create_DNA_Collection(text,size,no_of_bloom_filters)
+
   '''
+  
+    Create_DNA_Collection(text,size,no_of_bloom_filters)
+    
     This function will create bloom filter collection which will be used to 
     speed up string searching. It will create a bloom filter collection object.
     Returns nothing
@@ -17,8 +20,11 @@ Using this code :
       size of pattern).Defaults to 60.
       no_of_bloom_filters - No of bloom filters in your collection.Defaults to 15.
   '''
-  Search(pattern,collection,textfile)
+  
   '''
+  
+    Search(pattern,collection,textfile)
+    
     This function will search for the pattern in the textfile. Collection is the 
     path to the collection object in your system. It will return the number of 
     times the pattern occurs in the text.
