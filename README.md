@@ -5,8 +5,7 @@ I ll be writing a paper describing the algorithm used shortly.
 Specs : In python3. Need multiprocessing to run the algorithms parallely.
 
 Using this code : 
-
-  '''
+ 
   
     Create_DNA_Collection(text,size,no_of_bloom_filters)
     
@@ -19,9 +18,9 @@ Using this code :
       size - Size of the pattern you want to search(This algorithm is sensitive to
       size of pattern).Defaults to 60.
       no_of_bloom_filters - No of bloom filters in your collection.Defaults to 15.
-  '''
   
-  '''
+
+  
   
     Search(pattern,collection,textfile)
     
@@ -34,5 +33,5 @@ Using this code :
       collection - Path of the bloom filter collection object
       textfile - The file associated with the bloom filter object.
   
-  '''
+  
   
