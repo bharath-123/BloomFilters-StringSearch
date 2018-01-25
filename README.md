@@ -36,3 +36,5 @@ Using this code :
   
   
 Look at test.pdf to see the performance improvements.
+Naive with BLF - Bloom filters used with naive string search algorithm. Done serially and parallely
+Naive - Direct naive string search algorithm is used.
