@@ -68,7 +68,7 @@ def create_DNA_collection_and_search(specie1,specie2,flag) :
 		return ([count_1,count_2[0],count_3],benchmarks,count_2[1])
 
 #create a bloom filter collection of specie(file must be in pwd) where the length of the pattern you want to search for is of size(defaults to 60)
-def Create_DNA_Collection(text,size = 60,no_of_bloom_filters=15) :
+def Create_BloomFilter_Collection(text,size = 60,no_of_bloom_filters=15) :
 	'''
 	Creates the bloom filter collection and stores it in a folder 'Collections' (will be created if not there)
 	bloom filter collection size can be specified i.e by no_of_bloom_filters
