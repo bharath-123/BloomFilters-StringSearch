@@ -100,10 +100,3 @@ def Search(pattern,collection,textfile) :
 			count = parallel_search_naive(col,pattern,text)
 			print("The pattern appears {} times\n".format(count))
 
-if __name__ == '__main__' :
-	#create_DNA_collection_and_search("Human","Horse",0)
-	#create_DNA_collection_and_search("Horse","Horse",0)
-	#print(create_DNA_collection_and_search("Cat","Random",1))
-	#create_DNA_collection_and_search("Dog","Horse",0)
-	#create_DNA_collection_and_search("Mouse","Horse",1)
-	Search('CCCCGGGAGGTGGTGGGGGGGCACCGCGGGGGAACGGGCGAGGGAACTCGTCCCGTGCCC','./Collections/CatCollection.pkl','./Cat.fa')
