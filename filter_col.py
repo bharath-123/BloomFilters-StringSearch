@@ -34,38 +34,6 @@ class FilterCollection() :
 	    print("Collection created successfully")
 	    self.collection = tuple(self.collection)
 
-def create_DNA_collection_and_search(specie1,specie2,flag) :
-	if flag == 0 :
-		DNA = load_object(specie1 + "File.pkl")
-		print("Creating Collection of " + specie1 + "\n")
-		col = FilterCollection(15,60)
-		col.create_collection(DNA.genome)
-		#print(col.__dict__)
-		print("Saving object")
-		save_object(col,'./Collections/'+ specie1 +'Collection.pkl')
-		print("Saved Object")
-	else :
-		benchmarks = []
-		p = load_file('./Sequences/' + specie2 + 'Seq.txt').rstrip('\n')
-		print("Loading Object\n")
-		col = load_object('./Collections/'+ specie1 + 'Collection.pkl')
-		genome = load_file("./DNA/" + specie1 + ".fa")
-		print("Loaded object\nNow searching for pattern\n")
-		#print(col.__dict__)
-		print("The length of the text is {}.\nThe length of the pattern is {}.".format(len(genome),len(p)))
-		#naive Algo
-		start_time = time.time()
-		count_1 = FAsearch(p,genome)
-		benchmarks.append(time.time() - start_time)
-		#serial search
-		start_time = time.time()
-		count_2 = serial_search_naive(col,p,genome)
-		benchmarks.append(time.time() - start_time)
-		#parallel_search
-		start_time = time.time()
-		count_3 = parallel_search_naive(col,p,genome)
-		benchmarks.append(time.time() - start_time)
-		return ([count_1,count_2[0],count_3],benchmarks,count_2[1])
 
 #create a bloom filter collection of specie(file must be in pwd) where the length of the pattern you want to search for is of size(defaults to 60)
 def Create_BloomFilter_Collection(text,size = 60,no_of_bloom_filters=15) :
